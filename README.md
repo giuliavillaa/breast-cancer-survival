@@ -4,7 +4,7 @@ Binary survival-status classification on SEER breast cancer records, reported as
 negative result: the available clinical variables do not outperform a majority-class
 baseline.
 
-Machine Learning project, BSc in Artificial Intelligence — University of Pavia,
+Machine Learning project, BSc in Artificial Intelligence, University of Pavia,
 University of Milano-Bicocca, University of Milan.
 
 ![Model against baseline, and per-class metrics](figures/survival-ml.jpg)
@@ -13,7 +13,7 @@ University of Milano-Bicocca, University of Milan.
 
 ## Task
 
-4,024 patient records, target `Status` (Alive / Dead), with 84.7% of patients alive —
+4,024 patient records, target `Status` (Alive / Dead), with 84.7% of patients alive:
 a 5.5:1 class imbalance.
 
 Features cover tumour stage (T, N, 6th stage, grade), tumour size, regional nodes
@@ -60,7 +60,7 @@ and identifies 37 of 123 deceased patients.
 Three further observations point the same way. The selected regularisation parameters
 are very small (C between 0.0018 and 0.0054), which flattens the decision boundary.
 Each of the five outer folds selected a different pipeline, with F1 values differing by
-about one point — no configuration holds a real advantage. And training and validation
+about one point: no configuration holds a real advantage. And training and validation
 F1 are nearly identical within each fold (0.9171 against 0.9173 in the first), where a
 model that had fitted a decision boundary would normally score higher on its own
 training data.
@@ -72,7 +72,7 @@ this formulation.
 
 The task is framed as a cross-sectional binary classification, which does not handle
 censoring: a patient recorded as alive may have died after the follow-up cutoff. A
-better formulation predicts mortality at a fixed horizon — 36 or 60 months — excluding
+better formulation predicts mortality at a fixed horizon (36 or 60 months), excluding
 patients censored before it, which is how the survival literature treats this data.
 
 ## Repository
